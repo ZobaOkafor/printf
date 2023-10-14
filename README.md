@@ -8,7 +8,9 @@ This is a team project involving two collaborators; Taiwo Jesujoba and Chizoba J
 # Authors
 
 #. Chizoba Judih Okafor 
+   
    judithokafor30@gmail.com
 
 #. Taiwo Jesujoba 
+   
    jjshine0101@gmail.com
