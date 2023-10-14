@@ -7,10 +7,10 @@ This is a team project involving two collaborators; Taiwo Jesujoba and Chizoba J
 
 # Authors
 
-#. Chizoba Judih Okafor 
+. Chizoba Judih Okafor 
    
-   judithokafor30@gmail.com
+  judithokafor30@gmail.com
 
-#. Taiwo Jesujoba 
+. Taiwo Jesujoba 
    
-   jjshine0101@gmail.com
+  jjshine0101@gmail.com
