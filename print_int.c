@@ -10,6 +10,7 @@
  * Return: count
  */
 
+
 int print_integers(int num)
 {
 	int count = 0;
@@ -52,6 +53,7 @@ int print_integers(int num)
  *
  * Return: total count
  */
+
 
 int _printf(const char *format, ...)
 {
