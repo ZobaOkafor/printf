@@ -13,16 +13,16 @@ int print_integers(int num)
 	int count = 0;
 	int i = 0;
 
-	if (num == 0)
-	{
-		putchar('0');
-		count++;
-	}
-
 	if (num < 0)
 	{
 		putchar('-');
 		num = -num;
+		count++;
+	}
+
+	if (num == 0)
+	{
+		putchar('0');
 		count++;
 	}
 
@@ -35,7 +35,7 @@ int print_integers(int num)
 
 	while (i > 0)
 	{
-		putchar(buffer[--1]);
+		putchar(buffer[--i]);
 	}
 
 	return (count);
@@ -54,7 +54,7 @@ int print_integers(int num)
 int _printf(const char *format, ...)
 {
 	int i;
-	int total_count;
+	int total_count = 0;
 
 	va_list digits;
 
@@ -70,8 +70,8 @@ int _printf(const char *format, ...)
 				break;
 
 			if (format[i] == 'd' || format[i] == 'i')
-				total_count += print_integers(va_digits, int);
-		
+				total_count += print_integers(va_arg(digits, int));
+
 			else
 			{
 				putchar('%');
@@ -79,7 +79,7 @@ int _printf(const char *format, ...)
 				total_count += 1;
 			}
 		}
-		
+
 		else
 		{
 			total_count++;
@@ -91,4 +91,4 @@ int _printf(const char *format, ...)
 	putchar('\n');
 
 	return (total_count);
-}		
+}
