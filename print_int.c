@@ -87,7 +87,6 @@ int _printf(const char *format, ...)
 		}
 	}
 
-	putchar('\n');
 	va_end(digits);
 
 	return (total_count);
