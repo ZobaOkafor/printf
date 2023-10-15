@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _printf - prints to the stdout
- * @param *format - the format string to be printed
+ * @param *format: the format string to be printed
  * ... - variadic function
  * Return: on error, -1, and charac_print, on success
  */
