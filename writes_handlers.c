@@ -45,7 +45,7 @@ int handles_write_char(char c, char buffer[],
 
 /*WRITE NUMBERS*/
 /**
- * write_numbers - Prints a string
+ * write_number - Prints a string
  * @is_negative: Lista of arguments
  * @ind: char types.
  * @buffer: Buffer array to handle print
@@ -55,7 +55,7 @@ int handles_write_char(char c, char buffer[],
  * @size: Size specifier
  * Return: Number of chars printed.
  */
-int write_numbers(int is_negative, int ind, char buffer[],
+int write_number(int is_negative, int ind, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	int length = BUFF_SIZE - ind - 1;
