@@ -7,10 +7,11 @@
  * Return: count
  */
 
-int print_integers(int num)
+int print_integers(va_list digits)
 {
-	char buffer[];
+	char buffer[20];
 	int count = 0;
+	int num;
 	int i = 0;
 
 	if (num < 0)

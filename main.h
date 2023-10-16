@@ -9,6 +9,6 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int print_integers(int num);
+int print_integers(va_list digits);
 
 #endif
