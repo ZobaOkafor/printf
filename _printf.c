@@ -37,10 +37,14 @@ int _printf(const char *format, ...)
 				case 'i':
 					total_count += print_integers(copy);
 					break;
+				case '%':
+					_putchar('%');
+					total_count += 1;
+					break;
 				default:
 					_putchar('%');
 					_putchar(*format);
-					total_count += 1;
+					total_count += 2;
 					break;
 			}
 		}
