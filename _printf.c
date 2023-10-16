@@ -1,6 +1,8 @@
 #include "main.h"
 #include <stdarg.h>
 
+int print_integers(int num);
+
 /**
  * _printf - Variadic function to handle printing of %d and %i
  * in our custom _printf function
@@ -50,4 +52,10 @@ int _printf(const char *format, ...)
 	}
 	va_end(digits);
 	return (total_count);
+}
+
+
+int print_integers(int num);
+{
+	return (0);
 }
