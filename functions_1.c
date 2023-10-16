@@ -18,7 +18,7 @@ int unsigned_int(va_list args, char buffer[], int flags,
 	int i = BUFF_SIZE - 2;
 	unsigned long int num = va_arg(args, unsigned long int);
 
-	num = convert_size_unsgned(num, size);
+	num = convert_size_unsgnd(num, size);
 
 	if (num == 0)
 		buffer[i--] = '0';
@@ -27,11 +27,11 @@ int unsigned_int(va_list args, char buffer[], int flags,
 	while (num > 0)
 	{
 		buffer[i--] = (num % 10) + '0';
-		num / 10;
+		num /= 10;
 	}
 	i++;
 
-	return (write_unsgned(0, i, buffer, flags, width, precision, size));
+	return (write_unsgnd(0, i, buffer, flags, width, precision, size));
 }
 
 /**
@@ -90,7 +90,7 @@ int _octal(va_list args, char buffer[], int flags, int width,
 int _hexadecimal(va_list args, char buffer[], int flags,
 		int width, int precision, int size)
 {
-	return (print_hexa(args, "0123456789abcdef", buffer,
+	return (hexa(args, "0123456789abcdef", buffer,
 		flags, 'x', width, precision, size));
 }
 
@@ -111,7 +111,7 @@ int _hexadecimal(va_list args, char buffer[], int flags,
 int hexa_upper(va_list args, char buffer[], int flags,
 		int width, int precision, int size)
 {
-	return (print_hexa(args, "0123456789ABCDEF", buffer,
+	return (hexa(args, "0123456789ABCDEF", buffer,
 		flags, 'X', width, precision, size));
 }
 
