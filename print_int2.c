@@ -9,7 +9,7 @@
 
 int print_integers(int num)
 {
-	char buffer[];
+	char buffer[20];
 	int count = 0;
 	int i = 0;
 
