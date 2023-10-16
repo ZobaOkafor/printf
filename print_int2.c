@@ -15,14 +15,14 @@ int print_integers(int num)
 
 	if (num < 0)
 	{
-		_putchar('-');
+		putchar('-');
 		num = -num;
 		count++;
 	}
 
 	if (num == 0)
 	{
-		_putchar('0');
+		putchar('0');
 		count++;
 	}
 
@@ -35,7 +35,7 @@ int print_integers(int num)
 
 	while (i > 0)
 	{
-		_putchar(buffer[--i]);
+		putchar(buffer[--i]);
 	}
 
 	return (count);
@@ -73,12 +73,12 @@ int _printf(const char *format, ...)
 					count = print_integers(va_arg(digits, int));
 					break;
 				case '%':
-					_putchar('%');
+					putchar('%');
 					count = 1;
 					break;
 				default:
-					_putchar('%');
-					_putchar(format[i]);
+					putchar('%');
+					putchar(format[i]);
 					count = 2;
 					break;
 			}
@@ -87,7 +87,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			total_count++;
-			_putchar(format[i]); }
+			putchar(format[i]); }
 	}
 	va_end(digits);
 	return (total_count);
