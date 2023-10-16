@@ -31,7 +31,7 @@ int unsigned_int(va_list args, char buffer[], int flags,
 	}
 	i++;
 
-	return (write_unsgnd(0, i, buffer, flags, width, precision, size));
+	return (write_unsgned(0, i, buffer, flags, width, precision, size));
 }
 
 /**
@@ -55,7 +55,7 @@ int _octal(va_list args, char buffer[], int flags, int width,
 
 	UNUSED(width);
 
-	num = convert_size_unsgned(num, size);
+	num = convert_size_unsgnd(num, size);
 
 	if (num == 0)
 		buffer[i--] = '0';
@@ -140,7 +140,7 @@ int hexa(va_list args, char map_to[], char buffer[], int flags,
 
 	UNUSED(width);
 
-	num = convert_size_unsgned(num, size);
+	num = convert_size_unsgnd(num, size);
 
 	if (num == 0)
 		buffer[i--] = '0';
