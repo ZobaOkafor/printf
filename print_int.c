@@ -54,6 +54,7 @@ int print_integers(int num)
 int _printf(const char *format, ...)
 {
 	int i;
+	int count = 0;
 	int total_count = 0;
 
 	va_list digits;
@@ -65,21 +66,23 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-
 			if (format[i] == '\0')
 				break;
-
 			if (format[i] == 'd' || format[i] == 'i')
-				total_count += print_integers(va_arg(digits, int));
-
+				count = print_integers(va_arg(digits, int));
+			else if (format[i] == '%')
+			{
+				putchar('%');
+				count = 1;
+			}
 			else
 			{
 				putchar('%');
 				putchar(format[i]);
-				total_count += 1;
+				count = 2;
 			}
+		total_count += count;
 		}
-
 		else
 		{
 			total_count++;
@@ -88,6 +91,5 @@ int _printf(const char *format, ...)
 	}
 
 	va_end(digits);
-
 	return (total_count);
 }
