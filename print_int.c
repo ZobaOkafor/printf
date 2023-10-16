@@ -3,40 +3,40 @@
 
 /**
  * print_integers - Function that prints negative or positive integers
- * @num: numbers
+ * @digits: lis of arguments
  *
  * Return: count
  */
 
-int print_integers(int num)
+int print_integers(va_list digits)
 {
-	char buffer[20];
 	int count = 0;
-	int i = 0;
+	int div = 1;
+	int num = va_arg(digits, int);
 
 	if (num < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		num = -num;
+	}
+
+	if(num == 0)
+	{
+		_putchar('0');
 		count++;
 	}
 
-	if (num == 0)
+	while (num / div > 9)
 	{
-		putchar('0');
-		count++;
+		div *= 10;
 	}
 
-	while (num > 0)
+	while (div > 0)
 	{
-		buffer[i++] = '0' + (num % 10);
-		num /= 10;
+		_putchar('0' + num / div);
+		num %= div;
+		div /= 10;
 		count++;
-	}
-
-	while (i > 0)
-	{
-		putchar(buffer[--i]);
 	}
 
 	return (count);
