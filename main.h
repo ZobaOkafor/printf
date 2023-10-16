@@ -10,5 +10,6 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 int print_integers(int num);
+void print_buffer(char buffer[], int *buff_ind);
 
 #endif
