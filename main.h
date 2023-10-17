@@ -46,7 +46,7 @@ typedef struct fmt fmt_t;
 int _putchar(char c);
 int _printf(const char *format, ...);
 void print_buffer(char buffer[], int *buff_ind);
-int handles_print(const char *fmt, int *ind, va_list members, char buffer[], 
+int handles_print(const char *fmt, int *ind, va_list members, char buffer[],
 int flags, int width, int precision, int size);
 
 

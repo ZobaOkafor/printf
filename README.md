@@ -1,7 +1,7 @@
 #Printf Project
 
 #Description
-This is a team project by Taiwo Jesujoba and Chizoba Judith Okafor. Weare set on creating a custom *_printf* function that replicates the workings of the C standard library printf function.
+This is a team project by Taiwo Jesujoba and Chizoba Judith Okafor. We are set on creating a custom *_printf* function that replicates the workings of the C standard library printf function.
 
 #Collaborators
 - Chizoba Judith Okafor
