@@ -9,14 +9,14 @@
 #define UNUSED(x) (void)(x)
 #define BUFF_SIZE 1024
 
-/* for flags */
+/** for flags */
 #define MINUS 1
 #define PLUS 2
 #define HASH 8
 #define SPACE 16
 #define ZERO 4
 
-/* for sizes */
+/** for sizes */
 #define S_SHORT 1
 #define S_LONG 2
 
@@ -46,12 +46,12 @@ typedef struct fmt fmt_t;
 int _putchar(char c);
 int _printf(const char *format, ...);
 void print_buffer(char buffer[], int *buff_ind);
-int handles_print(const char *fmt, int *ind, va_list members, char buffer[], 
+int handles_print(const char *fmt, int *ind, va_list members, char buffer[],
 int flags, int width, int precision, int size);
 
 
 
-/* Prototypes to print numbers */
+/** Prototypes to print numbers */
 int print_int(va_list args, char buffer[],
         int flags, int width, int precision, int size);
 int print_binary(va_list args, char buffer[],
@@ -69,7 +69,7 @@ int hexa(va_list args, char map_to[], char buffer[], int flags,
 
 
 
-/* for util */
+/** for util */
 int is_printable(char c);
 int append_hexa_code(char ascii_code, char buffer[], int i);
 int is_digit(char c);
@@ -78,7 +78,7 @@ long int convert_size_unsgnd(unsigned long int num, int size);
 
 
 
-/* Prototypes for width handler */
+/** Prototypes for width handler */
 int handles_write_char(char c, char buffer[],
 	int flags, int width, int precision, int size);
 int write_number(int is_positive, int ind, char buffer[],
@@ -94,7 +94,7 @@ int write_pointers(char buffer[], int ind, int length,
 
 
 
-/* Prototypes to print characters and strings */
+/** Prototypes to print characters and strings */
 int print_char(va_list args, char buffer[],
 	int flags, int width, int precision, int size);
 int print_string(va_list args, char buffer[],
@@ -108,19 +108,19 @@ int print_rot13string(va_list args, char buffer[],
 
 
 
-/* Prototype to print memory address */
+/** Prototype to print memory address */
 int print_pointer(va_list args, char buffer[],
 	int flags, int width, int precision, int size);
 
 
 
-/* Prototype to print non printable characters */
+/** Prototype to print non printable characters */
 int print_non_printable(va_list args, char buffer[],
 	int flags, int width, int precision, int size);
 
 
 
-/* Prototypes to handle other specifiers */
+/** Prototypes to handle other specifiers */
 int fetch_flags(const char *format, int *i);
 int fetch_precision(const char *format, int *i, va_list members);
 int fetch_size(const char *format, int *i);
