@@ -51,7 +51,7 @@ int _octal(va_list args, char buffer[], int flags, int width,
 {
 	int i = BUFF_SIZE - 2;
 	unsigned long int num = va_arg(args, unsigned long int);
-	unsigned long int num_t = num;
+	unsigned long int init_num = num;
 
 	UNUSED(width);
 
@@ -67,7 +67,7 @@ int _octal(va_list args, char buffer[], int flags, int width,
 		num /= 8;
 	}
 
-	if (flags & HASH && num_t != 0)
+	if (flags & HASH && init_num != 0)
 		buffer[i--] = '0';
 	i++;
 
@@ -136,7 +136,7 @@ int hexa(va_list args, char map_to[], char buffer[], int flags,
 {
 	int i = BUFF_SIZE - 2;
 	unsigned long int num = va_arg(args, unsigned long int);
-	unsigned long int num_t = num;
+	unsigned long int init_num = num;
 
 	UNUSED(width);
 
@@ -152,7 +152,7 @@ int hexa(va_list args, char map_to[], char buffer[], int flags,
 		num /= 16;
 	}
 
-	if (flags & HASH && num_t != 0)
+	if (flags & HASH && init_num != 0)
 	{
 		buffer[i--] = flag_ch;
 		buffer[i--] = '0';
