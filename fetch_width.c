@@ -7,6 +7,7 @@
  * @members: list of arguments.
  * Return: width.
  */
+
 int fetch_width(const char *format, int *i, va_list members)
 {
 	int curr_i;

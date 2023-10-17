@@ -7,6 +7,7 @@
  * @members: list of arguments.
  * Return: Precision.
  */
+
 int fetch_precision(const char *format, int *i, va_list members)
 {
 	int curr_i = *i + 1;

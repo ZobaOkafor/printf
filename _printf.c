@@ -7,6 +7,7 @@ void print_buffer(char buffer[], int *buff_ind);
  * @format: format.
  * Return: chars_count
  */
+
 int _printf(const char *format, ...)
 {
 	int i, printed = 0, chars_count = 0;
@@ -57,6 +58,7 @@ int _printf(const char *format, ...)
  * @buffer: Array of chars
  * @buff_ind: Index at which to add next char, represents the length.
  */
+
 void print_buffer(char buffer[], int *buff_ind)
 {
 	if (*buff_ind > 0)
