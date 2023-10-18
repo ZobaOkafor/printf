@@ -55,19 +55,19 @@ int flags, int width, int precision, int size);
 
 /** Prototypes to print numbers */
 int print_int(va_list args, char buffer[],
-        int flags, int width, int precision, int size);
+	int flags, int width, int precision, int size);
 int print_binary(va_list args, char buffer[],
-        int flags, int width, int precision, int size);
-int unsigned_int(va_list args, char buffer[], int flags,
-                int width, int precision, int size);
+	int flags, int width, int precision, int size);
+int unsigned_int(va_list args, char buffer[], int flag,
+	int width, int precision, int size);
 int _octal(va_list args, char buffer[], int flags, int width,
-                int precision, int size);
+	int precision, int size);
 int _hexadecimal(va_list args, char buffer[], int flags,
-                int width, int precision, int size);
+	int width, int precision, int size);
 int hexa_upper(va_list args, char buffer[], int flags,
-                int width, int precision, int size);
+	int width, int precision, int size);
 int hexa(va_list args, char map_to[], char buffer[], int flags,
-        char flag_ch, int width, int precision, int size);
+	char flag_ch, int width, int precision, int size);
 
 
 
@@ -89,8 +89,8 @@ int write_num(int ind, char buffer[],
 	int flags, int width, int prec,
 	int length, char padd, char extra_c);
 int write_unsgned(int is_negative, int ind,
-	char buffer[],
-	int flags, int width, int precision, int size);
+	char buffer[], int flags, int width,
+	int precision, int size);
 int write_pointers(char buffer[], int ind, int length,
 	int width, int flags, char padd, char extra_c, int padd_start);
 
@@ -104,9 +104,9 @@ int print_string(va_list args, char buffer[],
 int print_percent(va_list args, char buffer[],
 	int flags, int width, int precision, int size);
 int print_reverse(va_list args, char buffer[],
-        int flags, int width, int precision, int size);
+	int flags, int width, int precision, int size);
 int print_rot13string(va_list args, char buffer[],
-        int flags, int width, int precision, int size);
+	int flags, int width, int precision, int size);
 
 
 
